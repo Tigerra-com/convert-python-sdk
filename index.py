@@ -5,12 +5,12 @@ from ConverterFileDownloader import ConverterFileDownloader
 from ConverterDeletePid import ConverterDeletePid
 
 try:
-    auth_token = "1|vRUHtpKXq12Rf9Ra1vsBPDLWwIEtZrrWQFYYHoGO14a25d17"
+    auth_token = "your_auth_token"
 
     # Start conversion
     print("Uploading file..")
     converter = Converter(auth_token)
-    conversion_response = converter.audio("flac-to-wav", "/Users/kirilkirkov/Downloads/1.flac")
+    conversion_response = converter.audio("flac-to-wav", "/path/to/file/1.flac")
     pid = conversion_response['pid']
     print(f"Conversion started. PID: {pid}")
 
@@ -35,7 +35,7 @@ try:
     # Download file
     download_url = status_response['data']
     downloader = ConverterFileDownloader(auth_token)
-    output_path = "/Users/kirilkirkov/Downloads/downloaded_file.wav"
+    output_path = "/path/to/file/downloaded_file.wav"
     downloader.download_file(download_url, output_path)
     print(f"File downloaded to: {output_path}")
 
