@@ -10,6 +10,9 @@ To use the Tigerra Converter library, you need to include the required dependenc
 
 ```sh
 git clone https://github.com/Tigerra-com/convert-python-sdk.git
+cd convert-python-sdk
+pip3 install requests
+python3 index.py
 ```
 
 ## Usage
